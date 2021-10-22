@@ -1,5 +1,4 @@
-# [[위코드 x 원티드] 백엔드 프리온보딩 선발 과제](https://wecode.notion.site/x-2f1edca34653419d8e109df1816197c2)
-
+# 위코드 x 원티드 백엔드 프리온보딩 선발 과제
 ### 1. 구현한 방법과 이유
 
 
@@ -24,3 +23,5 @@
 ```
 
 ### 3. api 명세(request/response 서술 필요)
+
+[관련 링크](https://wecode.notion.site/x-2f1edca34653419d8e109df1816197c2)
