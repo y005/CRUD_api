@@ -12,47 +12,48 @@
    - 게시글 수정: access_token을 헤더파일에 추가하여 수정할 글을 작성할 사용자일 경우에만 data로 들어온 title과 content로 게시글을 수정합니다.
    - 게시글 삭제: access_token을 헤더파일에 추가하여 삭제를 원하는 게시글의 작성자일 경우에만 게시글을 삭제합니다.
    
-### 2. API Usage Example(request/response)
-1) app.py 실행
+### 2. 사용하기 위한 세팅 방법
 ```bash
 nohup python app.py &
 ```
-2-1) 사용자 등록 
+### 3. API Usage Example(request/response)
+
+1) 사용자 등록 
 - request
 ```bash
 curl -d '{"id":"id", "pwd":"pwd"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:5000/user/register
 ```
-2-2) 사용자 로그인 
+2) 사용자 로그인 
 - request
 ```bash
 curl -d '{"id":"id", "pwd":"pwd"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:5000/user/login
 ```
-2-3) 토큰 refresh 
+3) 토큰 refresh 
 - request
 ```bash
 curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST http://127.0.0.1:5000/token/refresh
 ```
-2-4) 게시글 등록 
+4) 게시글 등록 
 - request
 ```bash
 curl -d '{"title":"hi","content":"hello"}' -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST http://127.0.0.1:5000/post/create
 ```
-2-5) 특정 게시글 조회 
+5) 특정 게시글 조회 
 - request
 ```bash
 curl -H "Content-Type: application/json" -X  GET http://127.0.0.1:5000/post/view?num=0
 ```
-2-6) 전체 게시글 조회 
+6) 전체 게시글 조회 
 - request
 ```bash
 curl -H "Content-Type: application/json" -X  GET http://127.0.0.1:5000/post/viewList?page=1&per_page=5
 ```
-2-7) 게시글 수정
+7) 게시글 수정
 - request
 ```bash
 curl -d '{"title":"hi","content":"not hello"}' -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X  PATCH http://127.0.0.1:5000/post/update/1
 ```
-2-8) 게시글 삭제
+8) 게시글 삭제
 - request
 ```bash
 curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X DELETE
