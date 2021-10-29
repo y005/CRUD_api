@@ -2,8 +2,8 @@
 
 ### 1. Description
    
-   - 사용한 프레임워크: flask
-   - 사용한 데이터베이스: sqlite3의 인메모리데이터베이스
+   - 사용한 프레임워크: `flask`
+   - 사용한 데이터베이스: `sqlite3`의 인메모리데이터베이스
    - 사용자 등록: 데이터베이스에 해당하는 id가 없는 경우 데이터베이스에 id와 단방향 해쉬로 decrypt된 pwd를 저장합니다. 
    - 사용자 로그인: 데이터베이스에 해당하는 id와 pwd가 있는지 확인한 후 일치하는 경우 JWT를 사용해 발급한 access_token과 refresh_token을 넘겨줍니다.
    - 토큰 refresh: access_token이 만료된 경우 새로운 access_token을 발급해줍니다.  
